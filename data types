@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+  cout<< "Hello World " << endl ;
+  cout<< "I am Atif \n";
+
+  int a = 5;
+  cout<< "a = " << a << endl;
+
+  char b = 'v';
+  cout<< "b = " << b << endl;
+
+  bool bl = "true";
+  cout<< "bl = " << bl << endl;
+  
+  float f =1.2;
+  cout<< "f = " << f << endl;
+  
+  double d =1.23;
+  cout<< "d = " << d << endl;
+
+  int size = sizeof(a);
+  cout<< "size of a is " << size << endl;
+
+}
