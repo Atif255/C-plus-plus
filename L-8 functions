@@ -105,4 +105,22 @@ int main () {
     cout << "not a prime number";
   }
 }
+************************************************
+#include <iostream>
+using namespace std;
+
+int function(int n) {
+  int answer = (3*n)+7;
+  return answer;
+}
+
+int main (){
+  int num;
+  cin >>num;
+  
+  cout << function(num);
+  
+}
+******************************************
+
 
