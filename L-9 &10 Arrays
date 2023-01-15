@@ -1,0 +1,153 @@
+#include <iostream>
+using namespace std;
+
+int getmax (int num[], int n) {
+  int max= INT32_MIN;
+  for(int i =0; i<n; i++) {
+    if(num[i] > max ) {
+      max = num[i];
+    }
+  }
+  return max;
+}
+
+int getmin (int num[], int n) {
+  int min = INT32_MAX;
+  for (int i=0; i<n; i++) {
+    if(num[i] < min) {
+      min = num[i];
+    }
+  }
+  return min;
+}
+
+int main() {
+  int size;
+  cin >> size;
+  int num[100] ;
+  for(int i = 0; i<size; i++) {
+    cin >> num[i];
+  }
+  cout << "maximum value is " << getmax(num, size) << endl; 
+  cout << "minimum value is " << getmin(num, size) << endl; 
+}
+
+************************************************************************************************
+#include <iostream>
+using namespace std;
+
+int sumarr (int arr[], int n){
+  int sum =0;
+  for (int i =0 ; i<n; i++ ){
+    sum = sum +arr[i];
+  }
+  return sum;
+}
+
+int main() {
+  int size; 
+  cin >> size;
+  int num[100];
+  for(int i=0; i<size; i++) {
+    cin >> num[i];
+  }
+  
+  cout << "sum of elements is " << sumarr(num,size);
+  
+}
+
+***********************************************************************
+
+#include <iostream>
+using namespace std;
+
+bool search(int arr[], int n, int key) {
+  for(int i=0; i<n; i++){
+    if(arr[i] == key){ 
+      return 1;
+      }
+  }
+  return 1;
+}
+
+int main() {
+  int num[10]= {9,3,5,-9,-15,6,0,2,4,7};
+  cout << "enter the key to search" << endl;
+  int key;
+  cin >> key;
+  bool found = search (num, 10,key);
+  if (found){
+    cout << "key is present ";
+  }
+  else {
+    cout << "key is absent";
+  }
+}
+
+************************************************************
+
+
+#include <iostream>
+using namespace std;
+
+void reverse(int arr[], int n) {
+  int start = 0;
+  int end = n-1;
+  while(start<=end) {
+    swap(arr[start], arr[end]);
+    start++;
+    end--;
+  }
+} 
+void printarray(int arr[], int n){
+  for(int i=0; i<n; i++) {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
+int main () {
+  int arr[6] = {6,4,5,3,1,0};
+  int brr[5] = {9,6,0,7,3};
+
+  reverse(arr,6);
+  reverse(brr,5);
+
+  printarray(arr,6);
+  printarray(brr,5);
+}
+
+
+*****************************************************************
+
+#include <iostream>
+using namespace std;
+
+void swapalt(int arr[], int n) {
+  int i=0;
+  while(i<(n-1)) {
+    swap(arr[i], arr[i+1]);
+    i+=2;
+  }
+}
+
+void printarray(int arr[], int n) {
+  for(int i=0; i<n; i++) {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
+
+int main () {
+  int arr[8] = {1,6,8,0,5,41,9,3};
+  int brr[7] = {37,5,14,0,8,59,95};
+  
+  swapalt(arr,8);
+  swapalt(brr,7);
+
+  printarray(arr,8);
+  printarray(brr,7);
+}
+
+***********************************************************
+
+
